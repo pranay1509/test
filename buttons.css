@@ -1,0 +1,132 @@
+/* --- Base Button Styles --- */
+.button {
+    /* Basic Layout & Typography */
+    display: inline-block; /* Allows padding and non-block behavior */
+    padding: 12px 25px; /* Top/bottom, Left/right padding */
+    font-family: 'Arial', sans-serif; /* Or your preferred font */
+    font-size: 16px;
+    font-weight: 600; /* Medium to bold */
+    text-align: center;
+    text-decoration: none; /* Remove underline for links acting as buttons */
+    cursor: pointer; /* Indicate it's clickable */
+    border: none; /* Remove default button border */
+    border-radius: 8px; /* Slightly rounded corners */
+
+    /* Colors */
+    background-color: #007bff; /* Primary brand color (Blue) */
+    color: #ffffff; /* White text */
+
+    /* Transitions for smooth effects on hover/focus */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+
+    /* Accessibility focus outline */
+    outline: none; /* Hide default outline for custom one */
+}
+
+/* --- Button States --- */
+
+/* Hover State */
+.button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Active/Pressed State */
+.button:active {
+    background-color: #004085; /* Even darker on click */
+    transform: translateY(0); /* "Press" effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow when pressed */
+}
+
+/* Focus State (for keyboard navigation accessibility) */
+.button:focus {
+    /* Ensure the focus outline is visible and distinct */
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5); /* Blue glow */
+    outline: none; /* Redundant if already done above, but good to re-state */
+}
+
+/* Disabled State */
+.button:disabled {
+    background-color: #cccccc; /* Lighter grey */
+    color: #666666; /* Darker grey text */
+    cursor: not-allowed; /* Indicate it's not clickable */
+    opacity: 0.7; /* Slightly faded */
+    transform: none; /* No lift */
+    box-shadow: none; /* No shadow */
+}
+
+/* --- Variations (Optional) --- */
+
+/* Secondary Button */
+.button.secondary {
+    background-color: #6c757d; /* Grey */
+    color: #ffffff;
+}
+
+.button.secondary:hover {
+    background-color: #5a6268;
+}
+
+.button.secondary:active {
+    background-color: #494f54;
+}
+
+.button.secondary:focus {
+    box-shadow: 0 0 0 4px rgba(108, 117, 125, 0.5);
+}
+
+
+/* Danger/Delete Button */
+.button.danger {
+    background-color: #dc3545; /* Red */
+    color: #ffffff;
+}
+
+.button.danger:hover {
+    background-color: #c82333;
+}
+
+.button.danger:active {
+    background-color: #bd2130;
+}
+
+.button.danger:focus {
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.5);
+}
+
+/* Outline Button */
+.button.outline {
+    background-color: transparent;
+    border: 2px solid #007bff; /* Border with primary color */
+    color: #007bff; /* Text color with primary color */
+}
+
+.button.outline:hover {
+    background-color: #007bff; /* Fill on hover */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button.outline:active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #ffffff;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button.outline:focus {
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Ghost Button (Outline with subtle background on hover) */
+.button.ghost {
+    background-color: transparent;
+    border: 2px solid #ffffff; /* Assuming a dark background for the page */
+    color: #ffffff;
+}
+
+.button.ghost:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white overlay
